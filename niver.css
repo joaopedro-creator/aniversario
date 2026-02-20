@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  text-align: center;
+  margin: 0;
+}
+
+.inicio {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4b7d;
+  color: white;
+  cursor: pointer;
+}
+
+.foto img {
+  width: 250px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
