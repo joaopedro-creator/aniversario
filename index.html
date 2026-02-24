@@ -1,34 +1,58 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>Feliz Aniversário.</title>
-    <link rel="stylesheet" href="niver.css" />
+    <title>Cânticos da Missa</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
+      <!-- MENU LATERAL -->
+      <div class="menu">
+        <h2>📂 Menu</h2>
 
-    <selection class="inicio">
-        <h1>Feliz Aniversário, meu amor!</h1>
-        <p>Hoje é um dia muito especial, pois celebramos o aniversário da pessoa mais incrível que eu conheço. Quero aproveitar esta oportunidade para expressar todo o meu amor e gratidão por ter você em minha vida.</p>
-        <p>Desde o momento em que nos conhecemos, você tem sido uma fonte constante de alegria, apoio e inspiração para mim. Sua presença ilumina meus dias e me faz sentir amado(a) de uma maneira que eu nunca imaginei ser possível.</p>
-        <p>Neste dia especial, desejo a você toda a felicidade do mundo. Que seus sonhos se realizem, que sua saúde seja sempre forte e que você continue a brilhar como a estrela que é. Você merece tudo de melhor que a vida tem a oferecer.</p>
-        <p>Obrigado(a) por ser quem você é e por compartilhar sua vida comigo. Eu te amo mais do que palavras podem expressar e estou ansioso(a) para celebrar muitos mais aniversários ao seu lado.</p>
-    </selection>
+        <h3>Filtrar por Tempo</h3>
+        <select id="filtroTempo">
+          <option value="todos">Todos os Tempos</option>
+          <option value="Tempo Comum">Tempo Comum</option>
+          <option value="Quaresma">Quaresma</option>
+          <option value="Páscoa">Páscoa</option>
+          <option value="Advento">Advento</option>
+          <option value="Natal">Natal</option>
+        </select>
 
-    <selection class="galeria">
-        <div class="foto">
-            <img src="foto1.jpg">
-            <p>Nosso primeiro encontro</p>
-        </div>
-        <div class="foto">
-            <img src="foto2.jpg">
-            <p>Viagem inesquecível</p>
-    </selection>
+        <hr />
 
-    <selection class="musica">
-        <button onclick="tocarMusica()">Ouça nossa música</button>
-        <audio id="musica" src="musica.mp3"></audio>
-    </selection>
-    <script src="niver.js"></script>
+        <h3>➕ Adicionar Cântico</h3>
+
+        <input type="text" id="titulo" placeholder="Título do cântico" />
+
+        <select id="tempo">
+          <option value="Tempo Comum">Tempo Comum</option>
+          <option value="Quaresma">Quaresma</option>
+          <option value="Páscoa">Páscoa</option>
+          <option value="Advento">Advento</option>
+          <option value="Natal">Natal</option>
+        </select>
+
+        <select id="parte">
+          <option value="Entrada">Entrada</option>
+          <option value="Comunhão">Comunhão</option>
+          <option value="Ofertório">Ofertório</option>
+          <option value="Final">Final</option>
+        </select>
+
+        <button id="btnAdicionar">Adicionar</button>
+      </div>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <div class="conteudo">
+        <h1>🎵 Cânticos da Missa</h1>
+
+        <div id="listaCanticos"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
